@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- Initialize dataLayer as THE FIRST THING - Critical for extensions -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        // Make dataLayer more observable for debugging extensions
+        // Log all pushes to help with debugging
+        var originalPush = window.dataLayer.push;
+        window.dataLayer.push = function() {
+            console.log('%c dataLayer.push() called', 'background: #4CAF50; color: white; padding: 2px 5px; border-radius: 3px;', arguments[0]);
+            return originalPush.apply(window.dataLayer, arguments);
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigger Happy - GTM Testing Playground</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5SFZ54KS');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Trigger Happy</h1>
+            <p class="subtitle">GTM Testing Playground for Seznam.cz Events</p>
+            <p class="description">Click buttons below to trigger dataLayer events and test your GTM template</p>
+        </header>
+
+        <div class="events-grid">
+            <!-- Search Event -->
+            <button class="event-btn" data-event="Search">
+                <div class="event-name">Search</div>
+                <div class="event-desc">Track search functionality</div>
+            </button>
+
+            <!-- ViewContent Event -->
+            <button class="event-btn" data-event="ViewContent">
+                <div class="event-name">ViewContent</div>
+                <div class="event-desc">Track product page views</div>
+            </button>
+
+            <!-- AddToWishlist Event -->
+            <button class="event-btn" data-event="AddToWishlist">
+                <div class="event-name">AddToWishlist</div>
+                <div class="event-desc">Track wishlist additions</div>
+            </button>
+
+            <!-- AddToCart Event -->
+            <button class="event-btn" data-event="AddToCart">
+                <div class="event-name">AddToCart</div>
+                <div class="event-desc">Track cart additions</div>
+            </button>
+
+            <!-- InitiateCheckout Event -->
+            <button class="event-btn" data-event="InitiateCheckout">
+                <div class="event-name">InitiateCheckout</div>
+                <div class="event-desc">Track checkout initiation</div>
+            </button>
+
+            <!-- AddPaymentInfo Event -->
+            <button class="event-btn" data-event="AddPaymentInfo">
+                <div class="event-name">AddPaymentInfo</div>
+                <div class="event-desc">Track payment info entry</div>
+            </button>
+
+            <!-- CompleteRegistration Event -->
+            <button class="event-btn" data-event="CompleteRegistration">
+                <div class="event-name">CompleteRegistration</div>
+                <div class="event-desc">Track registration completion</div>
+            </button>
+
+            <!-- Contact Event -->
+            <button class="event-btn" data-event="Contact">
+                <div class="event-name">Contact</div>
+                <div class="event-desc">Track contact interactions</div>
+            </button>
+
+            <!-- CustomizeProduct Event -->
+            <button class="event-btn" data-event="CustomizeProduct">
+                <div class="event-name">CustomizeProduct</div>
+                <div class="event-desc">Track product customization</div>
+            </button>
+
+            <!-- Donate Event -->
+            <button class="event-btn" data-event="Donate">
+                <div class="event-name">Donate</div>
+                <div class="event-desc">Track donations</div>
+            </button>
+
+            <!-- FindLocation Event -->
+            <button class="event-btn" data-event="FindLocation">
+                <div class="event-name">FindLocation</div>
+                <div class="event-desc">Track store location searches</div>
+            </button>
+
+            <!-- Lead Event -->
+            <button class="event-btn" data-event="Lead">
+                <div class="event-name">Lead</div>
+                <div class="event-desc">Track form submissions</div>
+            </button>
+
+            <!-- Purchase Event -->
+            <button class="event-btn" data-event="Purchase">
+                <div class="event-name">Purchase</div>
+                <div class="event-desc">Track completed purchases</div>
+            </button>
+
+            <!-- Schedule Event -->
+            <button class="event-btn" data-event="Schedule">
+                <div class="event-name">Schedule</div>
+                <div class="event-desc">Track appointment scheduling</div>
+            </button>
+
+            <!-- StartTrial Event -->
+            <button class="event-btn" data-event="StartTrial">
+                <div class="event-name">StartTrial</div>
+                <div class="event-desc">Track trial starts</div>
+            </button>
+
+            <!-- SubmitApplication Event -->
+            <button class="event-btn" data-event="SubmitApplication">
+                <div class="event-name">SubmitApplication</div>
+                <div class="event-desc">Track application submissions</div>
+            </button>
+
+            <!-- Subscribe Event -->
+            <button class="event-btn" data-event="Subscribe">
+                <div class="event-name">Subscribe</div>
+                <div class="event-desc">Track subscription sign-ups</div>
+            </button>
+
+            <!-- PageView Event -->
+            <button class="event-btn" data-event="PageView">
+                <div class="event-name">PageView</div>
+                <div class="event-desc">Track page views</div>
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p>Open your browser console to see event details</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
