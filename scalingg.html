@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scalin.gg | The Future of Marketing Optimization</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1F2937',
+                        scalinGreen: '#00D084',
+                        scalinOrange: '#FF8C42',
+                        darkerNavy: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'gradient-x': 'gradient-x 3s ease infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #1F2937;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00D084, #FF8C42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background-color: #00D084;
+            color: #111827;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #00a86b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 208, 132, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00D084; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-scalinOrange selection:text-white">
+
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="font-heading font-bold text-2xl tracking-tighter">
+            scalin<span class="text-scalinGreen">.gg</span>
+        </div>
+        <a href="#early-access" class="hidden md:inline-block px-6 py-2 border border-scalinGreen text-scalinGreen rounded-full hover:bg-scalinGreen hover:text-navy transition duration-300 font-semibold text-sm">
+            Beta Access
+        </a>
+    </nav>
+
+    <section class="relative min-h-[80vh] flex items-center justify-center px-6 overflow-hidden">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-scalinGreen rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-scalinOrange rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="text-center relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-darkerNavy border border-gray-700 text-xs font-medium text-gray-300">
+                <span class="w-2 h-2 inline-block rounded-full bg-scalinOrange mr-2 animate-pulse"></span>
+                Building in Public v0.1
+            </div>
+            
+            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Scale your campaign performance <br /> with <span class="gradient-text">AI Insights</span>
+            </h1>
+            
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                Stop drowning in BigQuery tables. We connect your raw data directly to Meta, TikTok & Google dashboards for actionable insights.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#early-access" class="btn-primary px-8 py-4 rounded-lg text-lg w-full md:w-auto">
+                    Get Early Access <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#demo" class="px-8 py-4 rounded-lg text-white border border-gray-600 hover:border-white transition w-full md:w-auto">
+                    <i class="fa-solid fa-play mr-2 text-scalinOrange"></i> Watch Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-darkerNavy">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl font-bold mb-4">The Attribution Gap is Costing You</h2>
+                <p class="text-gray-400">Why standard dashboards are failing modern marketers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-navy border border-gray-700 hover:border-scalinGreen transition duration-300">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-database text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Drowning in Data</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        You have terabytes of data in BigQuery but no easy way to visualize it without expensive BI tools or SQL experts.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-navy border border-gray-700 hover:border-scalinGreen transition duration-300">
+                    <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-eye-slash text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">The Attribution Blackbox</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Platform pixels are blind. You can't answer "What is my true ROI?" because the data isn't connecting back to the source.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-navy border border-gray-700 hover:border-scalinGreen transition duration-300">
+                    <div class="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-chart-line text-yellow-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Starving for Insights</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        By the time you analyze the CSV export, the trend is over. You need real-time signals to scale winning ads now.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-700 -z-10 transform -translate-y-1/2"></div>
+                
+                <div class="bg-navy p-6 rounded-xl border border-scalinGreen text-center w-full md:w-64 mb-8 md:mb-0 relative z-10">
+                    <div class="w-16 h-16 bg-scalinGreen rounded-full flex items-center justify-center mx-auto mb-4 text-navy font-bold text-2xl shadow-[0_0_20px_rgba(0,208,132,0.4)]">
+                        1
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white">TRACK</h3>
+                    <p class="text-gray-400 text-sm mt-2">Connect BigQuery to your ad platforms instantly.</p>
+                </div>
+
+                <div class="bg-navy p-6 rounded-xl border border-white text-center w-full md:w-64 mb-8 md:mb-0 relative z-10">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-navy font-bold text-2xl">
+                        2
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white">SCALE</h3>
+                    <p class="text-gray-400 text-sm mt-2">AI identifies high-ROI campaigns in real-time.</p>
+                </div>
+
+                <div class="bg-navy p-6 rounded-xl border border-scalinOrange text-center w-full md:w-64 relative z-10">
+                    <div class="w-16 h-16 bg-scalinOrange rounded-full flex items-center justify-center mx-auto mb-4 text-navy font-bold text-2xl shadow-[0_0_20px_rgba(255,140,66,0.4)]">
+                        3
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white">WIN</h3>
+                    <p class="text-gray-400 text-sm mt-2">Optimize spend and dominate your niche.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 bg-darkerNavy">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-scalinOrange font-bold tracking-wider text-sm uppercase">Proof of Concept</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mt-2">See it in action</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group">
+                    <div class="aspect-video bg-black rounded-lg border border-gray-700 overflow-hidden relative flex items-center justify-center group-hover:border-scalinGreen transition cursor-pointer">
+                        <div class="text-center">
+                            <i class="fa-solid fa-play-circle text-5xl text-gray-500 group-hover:text-scalinGreen transition"></i>
+                            <p class="text-gray-500 mt-2 text-xs">Video Placeholder</p>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-scalinGreen text-navy text-xs font-bold px-2 py-1 rounded">
+                            Setup (90s)
+                        </div>
+                    </div>
+                    <h3 class="font-bold mt-4 text-lg">Real-Time Tracking Setup</h3>
+                    <p class="text-gray-400 text-sm">Connecting data streams instantly.</p>
+                </div>
+
+                <div class="group">
+                    <div class="aspect-video bg-black rounded-lg border border-gray-700 overflow-hidden relative flex items-center justify-center group-hover:border-scalinOrange transition cursor-pointer">
+                        <div class="text-center">
+                            <i class="fa-solid fa-play-circle text-5xl text-gray-500 group-hover:text-scalinOrange transition"></i>
+                            <p class="text-gray-500 mt-2 text-xs">Video Placeholder</p>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-scalinOrange text-navy text-xs font-bold px-2 py-1 rounded">
+                            AI Demo (2m)
+                        </div>
+                    </div>
+                    <h3 class="font-bold mt-4 text-lg">AI Insights In Action</h3>
+                    <p class="text-gray-400 text-sm">From raw data to strategy.</p>
+                </div>
+
+                <div class="group">
+                    <div class="aspect-video bg-black rounded-lg border border-gray-700 overflow-hidden relative flex items-center justify-center group-hover:border-white transition cursor-pointer">
+                        <div class="text-center">
+                            <i class="fa-solid fa-play-circle text-5xl text-gray-500 group-hover:text-white transition"></i>
+                            <p class="text-gray-500 mt-2 text-xs">Video Placeholder</p>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-white text-navy text-xs font-bold px-2 py-1 rounded">
+                            Dashboard (90s)
+                        </div>
+                    </div>
+                    <h3 class="font-bold mt-4 text-lg">Dashboard Overview</h3>
+                    <p class="text-gray-400 text-sm">One view to rule them all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">Direct BigQuery Link</h4>
+                        <p class="text-sm text-gray-400">No middleware. Low latency connection straight to your tables.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-brands fa-meta"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">Meta CAPI Integration</h4>
+                        <p class="text-sm text-gray-400">Feed conversion data back to Meta to optimize algorithm learning.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">TikTok Events API</h4>
+                        <p class="text-sm text-gray-400">Server-side tracking for TikTok to bypass browser restrictions.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">AI Anomaly Detection</h4>
+                        <p class="text-sm text-gray-400">Get alerted when CPA spikes or ROAS drops below threshold.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">First-Party Data Owner</h4>
+                        <p class="text-sm text-gray-400">You own the data. We just build the pipes and the dashboard.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded bg-gray-800 flex-shrink-0 flex items-center justify-center text-scalinGreen">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">Mobile Command Center</h4>
+                        <p class="text-sm text-gray-400">Check campaigns and kill ad sets from your phone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 border-y border-gray-800 bg-navy/50">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h3 class="font-heading font-bold text-2xl mb-6">Building in Public</h3>
+            <p class="text-gray-400 mb-8">We are transparent about our roadmap. Join the conversation.</p>
+            
+            <div class="flex justify-center gap-6">
+                <a href="#" class="flex items-center gap-3 px-6 py-3 bg-black rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                    <i class="fa-brands fa-github text-2xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-500 uppercase">Code</div>
+                        <div class="font-bold text-sm">View GitHub</div>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-3 bg-sky-900/30 rounded-lg border border-sky-800 hover:border-sky-500 transition">
+                    <i class="fa-brands fa-twitter text-2xl text-sky-400"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-400 uppercase">Updates</div>
+                        <div class="font-bold text-sm">Follow Dev</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="early-access" class="py-24 px-6 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-scalinGreen rounded-full filter blur-[100px] opacity-10 pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto bg-navy border border-gray-700 rounded-3xl p-8 md:p-12 text-center relative z-10 shadow-2xl">
+            <div class="inline-block bg-scalinGreen text-navy font-bold px-3 py-1 rounded text-xs mb-6">BETA PHASE</div>
+            <h2 class="font-heading text-4xl font-bold mb-4">Join the Early Adopters</h2>
+            <p class="text-gray-400 mb-8 text-lg">
+                We are looking for 100 marketers to shape the future of this product. <br class="hidden md:block"/>
+                Help us build the roadmap and get locked in for life.
+            </p>
+
+            <div class="text-5xl font-bold text-white mb-2">$0<span class="text-xl text-gray-500 font-normal">/mo</span></div>
+            <p class="text-scalinOrange text-sm mb-8">Free during Beta period</p>
+
+            <ul class="text-left max-w-sm mx-auto space-y-3 mb-10 text-gray-300">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-scalinGreen"></i> Direct roadmap influence</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-scalinGreen"></i> Priority implementation support</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-scalinGreen"></i> Lifetime discount on launch</li>
+            </ul>
+
+            <form class="flex flex-col md:flex-row gap-3">
+                <input type="email" placeholder="Enter your work email" class="flex-1 px-6 py-4 rounded-lg bg-darkerNavy border border-gray-600 focus:border-scalinGreen focus:outline-none text-white placeholder-gray-500">
+                <button type="submit" class="btn-primary px-8 py-4 rounded-lg whitespace-nowrap">
+                    Get Early Access
+                </button>
+            </form>
+            <p class="text-xs text-gray-500 mt-4">No spam. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-800 bg-darkerNavy text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-heading font-bold text-xl text-white">scalin.gg</div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-scalinGreen transition">Twitter</a>
+                <a href="#" class="hover:text-scalinGreen transition">LinkedIn</a>
+                <a href="#" class="hover:text-scalinGreen transition">Contact</a>
+            </div>
+
+            <div>
+                &copy; 2024 Scalin.gg. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

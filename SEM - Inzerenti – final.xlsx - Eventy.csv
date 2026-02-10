@@ -1,0 +1,758 @@
+Událost ,Popis ,Použití,Povinné parametry,Doporučené parametry,event_data parametry - povinné,event_data parametry - doporučené pro konverze/rtg,Příklad eventu na webu,JSON formát,Python formát
+Search ,Sleduje vyhledávání na webu.,"Na stránce s výsledky vyhledávání, aby bylo možné analyzovat, co uživatelé hledají.
+-----
+Zaznamenání vyhledávacích dotazů na webu e-shopu.
+-----
+Měření počtu lidí, kteří hledají konkrétní produkt.
+-----
+Sledování návštěvníků, kteří hledají dostupnost služby v jejich oblasti.","consent,
+schema_version,
+event_type,
+event_time,
+event_id","s2s_headers,
+user_data nebo ids,
+event_name,
+event_url","sem_id,
+","contents, 
+content_category, 
+search_string, 
+num_items,
+value,
+currency","sem('track', 'Search', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 2,
+    'product_name': 'Adidas Ultraboost',
+    'unit_price': 4499
+     }],
+  content_category: 'Obuv | Bežecká obuv',
+  search_string: 'běžecké boty',
+  num_items: 15,
+  value: 8998,
+  currency: 'CZK',
+};
+});","{
+  ""event_name"": ""Search"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""search_string"": ""běžecké boty"",
+    ""num_items"": 15,
+    ""value"": 8998,
+    ""currency"": ""CZK""
+  }
+}",
+ViewContent ,"Sleduje zobrazení konkrétního obsahu, například produktové stránky, článku nebo videa.","Na produktových stránkách, stránkách článků nebo u jiného významného obsahu.
+-----
+Sledování zobrazení produktových stránek v e-shopu.
+-----
+Analýza zájmu o články na blogu.
+-----
+Identifikace návštěvníků, kteří si prohlédli detail služby.",,,,"contents, 
+content_name, 
+content_category, 
+content_type, 
+value,
+currency","sem('track', 'ViewContent', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 1,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_name: 'Bežecké boty Adidas Ultraboost',
+  content_category: 'Obuv | Bežecká obuv', 
+  content_type: 'product',
+  value: 4499,
+  currency: 'CZK',
+   };
+});
+
+","{
+  ""event_name"": ""ViewContent"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_name"": ""Bežecké boty Adidas Ultraboost"",
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""content_type"": ""product"",
+    ""value"": 8998,
+    ""currency"": ""CZK""
+  }
+}
+",
+AddToWishlist ,Sleduje přidání produktu do seznamu přání.,"Na tlačítku ""Přidat do seznamu přání"".
+-----
+Zaznamenání oblíbených produktů zákazníků.
+-----
+Cílení na uživatele, kteří si přidali produkt na seznam přání, ale nenakoupili.
+-----
+Měření zájmu o budoucí produkty nebo kolekce.",,,,"contents, 
+content_name, 
+content_category, 
+value, 
+currency","sem('track', 'AddToWishlist', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 1,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_name: 'Bežecké boty Adidas Ultraboost',
+  content_category: 'Obuv | Bežecká obuv', 
+  value: 4499,
+  currency: 'CZK'
+  };
+});","{
+  ""event_name"": ""AddToWishlist"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_name"": ""Bežecké boty Adidas Ultraboost"",
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""value"": 8998,
+    ""currency"": ""CZK""
+  }
+}
+",
+AddToCart ,Sleduje přidání produktu do nákupního košíku.,"Na tlačítku ""Přidat do košíku"".
+-----
+Identifikace uživatelů, kteří si přidali produkt do košíku, ale nenakoupili.
+-----
+Optimalizace retargetingových kampaní na opuštěné košíky.
+-----
+Testování konverzního poměru mezi zobrazením produktu a přidáním do košíku.",,,,"contents, 
+content_name, 
+content_category,  
+value,
+currency","sem('track', 'AddToCart', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 2,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_name: 'Bežecké boty Adidas Ultraboost',
+  content_category: 'Obuv | Bežecká obuv', 
+  value: 8998,
+  currency: 'CZK'
+  };
+});","{
+  ""event_name"": ""AddToCart"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_name"": ""Bežecké boty Adidas Ultraboost"",
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""value"": 8998,
+    ""currency"": ""CZK""
+  }
+}
+",
+InitiateCheckout ,Sleduje zahájení procesu objednávky.,"Na tlačítku ""Přejít k pokladně"".
+-----
+Sledování, kolik uživatelů začalo checkout, ale nedokončilo nákup.
+-----
+Identifikace problémů v nákupním procesu.
+-----
+Cílení na uživatele, kteří jsou blízko konverze.",,,,"contents, 
+content_name, 
+content_category,
+value,
+currency","sem('track', 'InitiateCheckout', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 2,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_name: 'Bežecké boty Adidas Ultraboost',
+  content_category: 'Obuv | Bežecká obuv', 
+  value: 8998,
+  currency: 'CZK'
+  };
+});","{
+  ""event_name"": ""InitiateCheckout"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_name"": ""Bežecké boty Adidas Ultraboost"",
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""value"": 8998,
+    ""currency"": ""CZK""
+    }
+}
+",
+AddPaymentInfo ,Sleduje zadání platebních údajů.,"Po kliknutí na tlačítko ""Uložit platební metodu"".
+-----
+Měření, kolik lidí je ochotno zadat platební údaje.
+-----
+Zlepšení platebního procesu na webu.
+-----
+Retargeting zákazníků, kteří zadali platební údaje, ale nenakoupili.",,,,"contents, 
+content_name, 
+content_category,
+value,
+currency","sem('track', 'AddPaymentInfo', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 2,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_name: 'Bežecké boty Adidas Ultraboost',
+  content_category: 'Obuv | Bežecká obuv', 
+  value: 8998,
+  currency: 'CZK'
+  };
+});","{
+  ""event_name"": ""AddPaymentInfo"",  
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_name"": ""Bežecké boty Adidas Ultraboost"",
+    ""content_category"": ""Obuv | Bežecká obuv"",
+    ""value"": 8998,
+    ""currency"": ""CZK""
+  }
+}
+",
+CompleteRegistration ,Sleduje dokončení registrace uživatele.,"Na stránce s potvrzením registrace.
+-----
+Sledování nových registrací uživatelů na webu.
+-----
+Měření účasti na věrnostních programech.
+-----
+Zlepšení registračního procesu.
+",,,,"content_name,
+status, 
+value,
+currency","sem('track', 'CompleteRegistration', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  content_name: 'Registrace do newsletteru'    
+  value: 0,
+  currency: 'CZK',
+  };
+});","{
+  ""event_name"": ""CompleteRegistration"",  
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""content_name"": ""Registrace do newsletteru"",
+    ""value"": 0,
+    ""currency"": ""CZK""
+  }
+}
+",
+Contact ,Sleduje interakci s kontaktními údaji (např. kliknutí na telefonní číslo nebo e-mail).,"Při kliknutí na telefonní číslo nebo e-mail.
+-----
+Měření počtu kliknutí na telefonní číslo nebo e-mail.
+-----
+Zaznamenání odeslaných kontaktních formulářů.
+-----
+Analýza, jaký druh zákazníků kontaktuje podporu.",,,,,"sem('track', 'Contact', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  contact_method: 'phone_call'
+  };
+});","{
+  ""event_name"": ""Contact"",  
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""contact_method"": ""phone_call""
+  }
+}
+",
+CustomizeProduct ,"Sleduje úpravu produktu (např. výběr barvy, gravírování).",Po provedení úprav na produktu.,,,,,"sem('track', 'CustomizeProduct', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 2,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  content_type: 'product',  
+  value: 8998,
+  currency: 'CZK',
+  customization_type: 'engraving'
+  };
+});","{
+  ""event_name"": ""CustomizeProduct"",  
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 2,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""content_type"": ""product"",
+    ""value"": 8998,
+    ""currency"": ""CZK"",
+    ""customization_type"": ""engraving""
+  }
+}
+",
+Donate ,Sleduje poskytnutí daru nebo příspěvku.,"Po dokončení darování.
+-----
+Sledování příspěvků na charitativní organizace.
+-----
+Retargeting lidí, kteří darovali v minulosti.
+Analýza průměrné výše daru.
+-----",,,,,"sem('track', 'Donate', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 500,
+  currency: 'CZK',
+  donation_type: 'jednorázový'
+  };
+});","{
+  ""event_name"": ""Donate"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 500,
+    ""currency"": ""CZK"",
+    ""donation_type"": ""jednorázový""
+  }
+}
+",
+FindLocation ,Sleduje hledání fyzické pobočky.,Po vyhledání obchodu na mapě.,,,,,"sem('track', 'FindLocation', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  location_id: 'praha-centrum'
+  };
+});","{
+  ""event_name"": ""FindLocation"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""location_id"": ""praha-centrum""
+  }
+}
+",
+Lead ,Sleduje odeslání formuláře nebo jiný projev zájmu o produkt/službu.,"Sledování formulářů odeslaných na webu (např. poptávkový formulář).
+-----
+Měření registrací na webináře nebo události.
+-----
+Cílení na uživatele, kteří projevili zájem o služby.",,,,"content_category, 
+content_name,
+value,
+currency","sem('track', 'Lead', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: {  
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  content_name: 'Žádost o testovací produkt'
+  };
+});","{
+  ""event_name"": ""Lead"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""content_name"": ""Kontaktní formulář""
+  }
+}
+",
+Purchase ,Sleduje dokončení nákupu.,"Na stránce s potvrzením objednávky.
+-----
+Měření počtu konverzí z reklamních kampaní.
+-----
+Analýza průměrné hodnoty objednávky.
+-----
+Sledování opakovaných nákupů zákazníků.",,,,"order_id
+contents, 
+content_name, 
+content_type, 
+value,
+currency","sem('track', 'Purchase', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  order_id: 'ABC123'
+  contents: [{
+    'id': 'BTS-94365',
+    'quantity': 1,
+    'product_name': 'Adidas Ultraboost,
+    'unit_price': 4499
+     }],
+  value: 4499,
+  currency: 'CZK',
+  content_type: 'product',
+  };
+});","{
+  ""event_name"": ""Purchase"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""order_id"": ""ABC123"",
+    ""contents"": [
+      {
+        ""id"": ""BTS-94365"",
+        ""quantity"": 1,
+        ""product_name"": ""Adidas Ultraboost"",
+        ""unit_price"": 4499
+      }
+    ],
+    ""value"": 4499,
+    ""currency"": ""CZK"",
+    ""content_type"": ""product"",
+    }
+}
+",
+Schedule ,Sleduje rezervaci schůzky nebo události.,"Po rezervaci konzultace nebo schůzky.
+-----
+Měření online rezervací (např. konzultace, schůzky).
+-----
+Retargeting uživatelů, kteří projevili zájem o schůzku.
+-----
+Optimalizace konverzního poměru mezi zájmem a rezervací.",,,,,"sem('track', 'Schedule', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  appointment_type: 'konzultace'
+  };
+});","{
+  ""event_name"": ""Schedule"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": { 
+    ""sem_id"": ""Sem24921z457k"", 
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""appointment_type"": ""konzultace""
+  }
+}
+",
+StartTrial ,Sleduje spuštění bezplatného zkušebního období.,"Po registraci k trial verzi služby.
+-----
+Sledování uživatelů, kteří začali bezplatnou zkušební verzi.
+-----
+Retargeting uživatelů, kteří si zkušební verzi neprodloužili.
+-----
+Měření úspěšnosti marketingových kampaní na trialy.",,,,"currency, 
+predicted_ltv, 
+value","sem('track', 'StartTrial', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  trial_type: '30 dní zdarma'
+  };
+});","{
+  ""event_name"": ""StartTrial"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""trial_type"": ""30 dní zdarma""
+  }
+}
+",
+SubmitApplication ,Sleduje odeslání žádosti (např. žádost o práci).,"Po odeslání formuláře žádosti.
+-----
+Měření žádostí o pracovní pozice.
+-----
+Sledování žádostí o úvěry nebo financování.
+-----
+Cílení na uživatele, kteří žádost nedokončili.",,,,,"sem('track', 'SubmitApplication', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  value: 0,
+  currency: 'CZK',
+  content_name: 'Žádost o zaměstnání'
+  };
+});","{
+  ""event_name"": ""SubmitApplication"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 0,
+    ""currency"": ""CZK"",
+    ""content_name"": ""Žádost o zaměstnání""
+  }
+}
+",
+Subscribe ,Sleduje přihlášení k placenému předplatnému.,"Po potvrzení předplatného.
+-----
+Sledování přihlášení k odběru newsletteru.
+-----
+Měření konverzí z reklam na předplatné služby.
+-----
+Retargeting uživatelů, kteří se přihlásili, ale ještě nepřečetli obsah.",,,,"value,
+currency, 
+predicted_ltv","sem('track', 'Subscribe', {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,  
+  value: 299.99,
+  currency: 'CZK',
+  subscription_type: 'měsíční'
+  };
+});","{
+  ""event_name"": ""Subscribe"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1,
+    ""value"": 299.99,
+    ""currency"": ""CZK"",
+    ""subscription_type"": ""měsíční""
+    }
+}
+",
+PageView ,Sleduje zobrazení stránky (každé načtení stránky).,"Tento event by měl být implementován na všech stránkách webu.
+-----
+Sledování návštěvníků webu pro retargeting.
+-----
+Zaznamenání zobrazení klíčových stránek (např. domovská stránka, kontaktní stránka).
+-----
+Měření návštěvnosti přistávacích stránek v kampaních.",,,,,"sem('track', 'PageView',  {
+schema_version: 'v2',
+event_type: 'rtgconv',
+event_time: 1736950223,
+event_id: 'c5113fc8-3e26-45c0-b463-f368bc269e58',
+event_data: { 
+  sem_id: 'Sem24921z457k', 
+  consent: 1,
+  };
+});","{
+  ""event_name"": ""PageView"",
+  ""schema_version"": ""v2"",
+  ""event_type"": ""rtgconv"",
+  ""event_time"": 1736950223,
+  ""event_id"": ""c5113fc8-3e26-45c0-b463-f368bc269e58"",
+  ""event_data"": {
+    ""sem_id"": ""Sem24921z457k"",
+    ""consent"": 1
+  }
+}
+",
